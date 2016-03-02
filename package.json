@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "style": "stylus -u nib -w -c index.styl"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5",
+    "swig": "^1.4.2",
+    "twig": "^0.8.8"
+  }
+}

@@ -1,0 +1,33 @@
+@import nib
+	
+body
+	font-family: 'Roboto', sans-serif;
+	
+.Post
+	margin 10px
+	border-radius 10px
+	display flex
+	align-items center
+	cursor pointer
+	&:hover
+		background #f5f8fa
+	&-content
+		&-header
+			display flex
+			&-name
+				font-weight bold
+				&:hover
+					text-decoration underline
+					color #0084B4
+			&-user
+			&-date
+				color #8899a6
+			&-date
+				&:hover
+					color #0084B4
+					text-decoration underline
+					cursor pointer
+		
+		&-actions
+			i:not(:first-child)
+				margin-left 20px

@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>hola hackspace</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+
+</head>
+<body>
+
+	<section class="information">
+	</section>
+
+	<section class="timeline">
+		
+		<div class="AddPost">
+			<div class="AddPost-avatar"></div>
+			<div class="AddPost-content">
+				<input></input>
+
+				<button>Send</button>
+			</div>
+
+
+		</div>
+
+		<article class="Post">
+			<div class="Post-image">
+				<img src="https://pbs.twimg.com/profile_images/670779346727116800/rSaShbjY_bigger.jpg">
+			</div>
+			<div class="Post-content">
+				<header class="Post-content-header">
+					<p class="Post-content-header-name">Juan Pablo Buriticá</p>
+					<p class="Post-content-header-user">@buritica</p>
+					<p class="Post-content-header-date">7 h</p>
+				</header>
+				<section class="Post-content-text">
+					I've waited for almost 2 years to get the pleasure of working with @apeace again. Today I welcome him to the @ride team
+				</section>
+				<footer class="Post-content-actions">
+					<i class="fa fa-reply"></i>
+					<i class="fa fa-retweet"></i>
+					<i class="fa fa-heart"></i>
+					<i class="fa fa-ellipsis-h"></i>
+				</footer>
+			</div>
+		</article>
+
+	</section>
+
+	<footer class="foter">
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			console.log('hi from jquery!')
+
+			var text
+
+			$('button').click(function () {
+				console.log('click!')
+				
+				text = $('input').val()				
+				
+				$.get('/addPost', {content: text}, function (response) {
+
+				})			
+			})
+
+
+		})
+	</script>
+
+</body>
+</html>
